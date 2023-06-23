@@ -1,9 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AluraFlix.Data.Dtos
+namespace AluraFlix.Models
 {
-    public class CreateVideoDto
+    public class Video
     {
+        [Key]
+        [Required]
+        public int Id { get; set; }
         [Required(ErrorMessage = "O campo Title é obrigatorio")]
         public string Titulo { get; set; }
         [Required(ErrorMessage = "O campo Description é obrigatório")]
